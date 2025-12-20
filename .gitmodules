@@ -1,0 +1,6 @@
+[submodule "lucidgloves/lucidgloves"]
+	path = lucidgloves/lucidgloves
+	url = https://github.com/LucidVR/lucidgloves.git
+[submodule "lucidgloves/lucidgloves-fae-mod"]
+	path = lucidgloves/lucidgloves-fae-mod
+	url = https://github.com/codingcatgirl/lucidgloves-fae-mod.git
