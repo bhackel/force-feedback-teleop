@@ -1,0 +1,7 @@
+# AmazingHand Configuration File
+
+# Serial port configuration
+com_port: /dev/ttyUSB0
+
+# Calibration data for middle positions for each motor
+middle_pos: [3,0, -5,-8, -2,5, -12,0]

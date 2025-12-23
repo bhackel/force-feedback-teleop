@@ -1,4 +1,6 @@
 from setuptools import find_packages, setup
+import os
+from glob import glob
 
 package_name = 'amazing_hand'
 
@@ -10,6 +12,8 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        (os.path.join('share', package_name, 'config'),
+            glob('amazing_hand/*.yaml')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -20,10 +24,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'demo = amazing_hand.AmazingHand_Demo:main',
-            'demo_both = amazing_hand.AmazingHand_Demo_Both:main',
-            'finger_test = amazing_hand.AmazingHand_FingerTest:main',
-            'finger_middle_pos = amazing_hand.AmazingHand_Hand_FingerMiddlePos:main',
+            'amazing_hand_controller = amazing_hand.amazing_hand_controller:main',
         ],
     },
 )
