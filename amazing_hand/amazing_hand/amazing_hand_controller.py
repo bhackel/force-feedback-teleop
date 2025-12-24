@@ -228,6 +228,10 @@ class AmazingHandController(Node):
             tuple: (m1_radians, m2_radians) for the two servos
         """
 
+        # Clamp inputs to valid ranges
+        flexion = max(0.0, min(1.0, flexion))
+        splay = max(-1.0, min(1.0, splay))
+
         # Map flexion [0, 1] to base motor angles
         # flexion=0 (open): -35 deg, flexion=1 (closed): 90 deg
         flexion_angle = -35 + flexion * 125  # ranges from -35 to 90 degrees

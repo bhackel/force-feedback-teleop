@@ -1,0 +1,4 @@
+# Lucidgloves Configuration File
+
+# Serial port configuration
+com_port: /dev/ttyUSB1
